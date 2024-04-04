@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class Asteroid : MonoBehaviour
@@ -8,9 +9,15 @@ public class Asteroid : MonoBehaviour
 
     [SerializeField] float fallSpeed;
     public bool isHit = false; //Is called by ShipScript
-    void Start()
+    
+    public string variant; //Is called by AstSpawn script and FindAst script.
+    public GameObject charTrack; //Is set by AstSpawn
+    private SpriteRenderer rend;
+    void Awake()
     {
-        
+        rend = GetComponent<SpriteRenderer>();
+        variant = "null";
+        StartCoroutine(ChooseColor());
     }
 
     // Update is called once per frame
@@ -25,9 +32,43 @@ public class Asteroid : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        ShowVariant(); //Shows or hides variants based on who is selected
     }
     void PullToBlack()
     {
         transform.position = Vector2.MoveTowards(transform.position, new Vector2(0, 0), 1 * fallSpeed * Time.deltaTime);
+    }
+
+    void ShowVariant()
+    {
+        if(variant != "null")
+        {
+            if(variant != charTrack.GetComponent<CharTrack>().selectChar)
+            {
+                rend.enabled = false;
+            }
+            else if(rend.enabled == false)
+            {
+                rend.enabled = true;
+            }
+        }
+        else
+        {
+            rend.enabled = true;
+        }
+    }
+
+    IEnumerator ChooseColor()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if(variant == "Sydney")
+        {
+            rend.color = Color.red;
+        }
+        if(variant == "Ishmael")
+        {
+            rend.color = Color.cyan;
+        }
     }
 }

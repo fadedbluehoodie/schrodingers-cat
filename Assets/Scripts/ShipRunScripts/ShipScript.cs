@@ -39,7 +39,7 @@ public class ShipScript : MonoBehaviour
         
         if(hitTimer)
         {
-            StartCoroutine(resetHitstun(2, 2)); //Resets Hitstun and gives Invincibility
+            StartCoroutine(ResetHitstun(2, 2)); //Resets Hitstun and gives Invincibility
         }
 
         Escape(); //Checks if player has escaped
@@ -83,7 +83,7 @@ public class ShipScript : MonoBehaviour
         }
     }
 
-    IEnumerator resetHitstun(int stunSecs, int invincSecs)
+    IEnumerator ResetHitstun(int stunSecs, int invincSecs)
     {
         hitTimer = false;
         invincible = true;
@@ -108,6 +108,7 @@ public class ShipScript : MonoBehaviour
         if(blackDist >= escapeRange)
         {
             Debug.Log("YOU WIN!");
+            fallSpeed = 0;
         }
     }
 
@@ -124,8 +125,8 @@ public class ShipScript : MonoBehaviour
 
         if(fuel < 0 && blackDist <= escapeRange)
         {
-            fallSpeed *= 2;
-            originalFlySpeed *= 2;
+            fallSpeed *= 1.002f;
+            originalFlySpeed *= 1.002f;
         }
     }
 }

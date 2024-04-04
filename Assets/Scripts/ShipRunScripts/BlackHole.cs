@@ -15,7 +15,7 @@ public class BlackHole : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = Vector2.zero;
     }
 
     void OnTriggerEnter2D(Collider2D col2D)
@@ -29,6 +29,5 @@ public class BlackHole : MonoBehaviour
             col2D.GetComponent<ShipScript>().isConsumed = true;
             consumePlayer = true;
         }
-        Debug.Log("EATEN");
     }
 }

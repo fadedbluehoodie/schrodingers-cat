@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallSpeed: 1.5
   isHit: 0
+  variant: 
 --- !u!61 &7739268008061263197
 BoxCollider2D:
   m_ObjectHideFlags: 0
