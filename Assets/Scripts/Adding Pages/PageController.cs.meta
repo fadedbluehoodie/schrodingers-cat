@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c455e503b56b9e749b1a10e7d9e5a9b3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Sydney2: {fileID: 1607518486727196312, guid: 41de8f81df7edce42b0b590794586d66, type: 3}
+  - Sydney3: {fileID: 4044844080746586644, guid: 9b6422978bb16b34e864db2505009e4f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -91,7 +91,7 @@ public class DoubleClickZoom : MonoBehaviour, IPointerClickHandler
             for (int i = 0; i < positions.Count; i++)
             {
                 var posit = positions[i];
-                var positRect = Rect.MinMaxRect(                    //Get's the bounds for the pannel size
+                var positRect = Rect.MinMaxRect(  //Get's the bounds for the pannel size
                     posit.transform.position.x - (posit.GetComponent<SpriteRenderer>().bounds.size.x / 2),
                     posit.transform.position.y - (posit.GetComponent<SpriteRenderer>().bounds.size.x / 2),
                     posit.transform.position.x + (posit.GetComponent<SpriteRenderer>().bounds.size.x / 2),
