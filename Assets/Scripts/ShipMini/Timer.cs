@@ -7,10 +7,14 @@ public class Timer : MonoBehaviour
     private float timer;
     private bool isTimerRunning;
 
+    // Event triggered when the specified time interval has elapsed
+    public delegate void TimeElapsedEventHandler();
+    public static event TimeElapsedEventHandler OnTimeElapsed;
+
     void Start()
     {
         timer = 0f;
-        isTimerRunning = true; // Start the timer when the game starts
+        isTimerRunning = true;
     }
 
     void Update()
@@ -19,6 +23,17 @@ public class Timer : MonoBehaviour
         {
             timer += Time.deltaTime;
             UpdateTimerDisplay();
+
+            // Check if 10 minutes have passed
+            if (timer >= 600f) // 10 minutes = 600 seconds
+            {
+                if (OnTimeElapsed != null)
+                {
+                    // Trigger the event
+                    OnTimeElapsed();
+                    timer = 0f; // Reset the timer
+                }
+            }
         }
     }
 
