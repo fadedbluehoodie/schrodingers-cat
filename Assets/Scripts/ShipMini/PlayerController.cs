@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f; // Adjust this value to control movement speed
+    private bool hasTool = false;
 
     private Rigidbody2D rb;
 
@@ -25,5 +26,23 @@ public class PlayerController : MonoBehaviour
 
         // Move the player
         rb.velocity = movement * moveSpeed;
+    }
+
+    public void CollectTool()
+    {
+        hasTool = true;
+    }
+
+
+    public void UseTool(Collider2D rockCollider)
+    {
+        if (hasTool && rockCollider.CompareTag("Rock"))
+        {
+            // Destroy the rock obstacle
+            Destroy(rockCollider.gameObject);
+        }
+
+
+
     }
 }

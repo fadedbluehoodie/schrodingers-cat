@@ -49,6 +49,13 @@ public class ShipGameManager : MonoBehaviour
         }
     }
 
+    public void WinGame()
+    {
+        // Load victory scene or display a message
+        SceneManager.LoadScene("VictoryScene");
+    }
+
+
     // Restart the game
     public void RestartGame()
     {
