@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private Transform gameTransform;
-    [SerializeField] private Transform piecePrefab;
+    [SerializeField] private Transform[] piecePrefabs;
 
     private List<Transform> pieces;
     private int emptyLocation;
@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
         {
             for (int col = 0; col < size; col++)
             {
+                Transform piecePrefab = piecePrefabs[Random.Range(0, piecePrefabs.Length)]; // Randomly select a piece prefab
                 Transform piece = Instantiate(piecePrefab, gameTransform);
                 pieces.Add(piece);
                 // Pieces will be in a game board going from -1 to +1
