@@ -13,15 +13,48 @@ public class PlayerSwitcher : MonoBehaviour
 
     void Start()
     {
-        player1Controller = player1.GetComponent<PlayerController>();
-        player2Controller = player2.GetComponent<PlayerController>();
+        // Check if player1 GameObject and its PlayerController component are assigned
+        if (player1 != null)
+        {
+            player1Controller = player1.GetComponent<PlayerController>();
+            if (player1Controller == null)
+            {
+                Debug.LogError("PlayerSwitcher: Player1 is missing PlayerController component.");
+            }
+        }
+        else
+        {
+            Debug.LogError("PlayerSwitcher: Player1 GameObject is not assigned.");
+        }
 
-        currentPlayer = player1;
-        currentController = player1Controller;
+        // Check if player2 GameObject and its PlayerController component are assigned
+        if (player2 != null)
+        {
+            player2Controller = player2.GetComponent<PlayerController>();
+            if (player2Controller == null)
+            {
+                Debug.LogError("PlayerSwitcher: Player2 is missing PlayerController component.");
+            }
+        }
+        else
+        {
+            Debug.LogError("PlayerSwitcher: Player2 GameObject is not assigned.");
+        }
 
-        // Initialize control
-        player1Controller.enabled = true;
-        player2Controller.enabled = false;
+        // Continue with initialization if no errors were encountered
+        if (player1Controller != null && player2Controller != null)
+        {
+            currentPlayer = player1;
+            currentController = player1Controller;
+
+            // Initialize control
+            player1Controller.enabled = true;
+            player2Controller.enabled = false;
+        }
+        else
+        {
+            Debug.LogError("PlayerSwitcher: Initialization failed due to missing components.");
+        }
     }
 
     void Update()

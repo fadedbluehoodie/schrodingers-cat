@@ -14,25 +14,33 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Get input axes
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        // Only process movement input if the player controller is enabled
+        if (enabled)
+        {
+            // Get input axes
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
 
-        // Calculate movement direction
-        Vector2 movement = new Vector2(horizontalInput, verticalInput);
+            // Calculate movement direction
+            Vector2 movement = new Vector2(horizontalInput, verticalInput);
 
-        // Normalize movement vector to maintain consistent speed in all directions
-        movement.Normalize();
+            // Normalize movement vector to maintain consistent speed in all directions
+            movement.Normalize();
 
-        // Move the player
-        rb.velocity = movement * moveSpeed;
+            // Move the player
+            rb.velocity = movement * moveSpeed;
+        }
+        else
+        {
+            // If the player controller is disabled, stop movement
+            rb.velocity = Vector2.zero;
+        }
     }
 
     public void CollectTool()
     {
         hasTool = true;
     }
-
 
     public void UseTool(Collider2D rockCollider)
     {
@@ -41,8 +49,5 @@ public class PlayerController : MonoBehaviour
             // Destroy the rock obstacle
             Destroy(rockCollider.gameObject);
         }
-
-
-
     }
 }
