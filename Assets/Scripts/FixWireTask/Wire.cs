@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; // Add this line to import UnityEngine.UI namespace
 
 public class Wire : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Image _image;
+
+    private void Awake()
     {
-        
+        _image = GetComponent<Image>(); // Corrected the GetComponent method
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetColor(Color color)
     {
-        
+        _image.color = color;
     }
 }
