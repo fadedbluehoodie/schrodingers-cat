@@ -7,6 +7,10 @@ TagManager:
   - Ship
   - Chicken
   - Wire
+  - Tool1
+  - Tool2
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX

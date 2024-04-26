@@ -48,9 +48,10 @@ public class PlayerController2 : MonoBehaviour
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
 
-            // Debug log to check movement input
+            /* Debug log to check movement input
             Debug.Log(gameObject.name + " horizontal input: " + horizontalInput);
             Debug.Log(gameObject.name + " vertical input: " + verticalInput);
+            */
 
             // Calculate movement direction
             Vector2 movement = new Vector2(horizontalInput, verticalInput);
@@ -68,7 +69,7 @@ public class PlayerController2 : MonoBehaviour
         }
     }
 
-    public void CollectTool()
+    public void CollectTool2()
     {
         hasTool = true;
     }
