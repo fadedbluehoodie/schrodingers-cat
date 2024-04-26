@@ -3,13 +3,13 @@ using UnityEngine;
 public class PlayerController1 : MonoBehaviour
 {
     public float moveSpeed = 5f; // Adjust this value to control movement speed
-    public bool hasTool = false;
+    public bool hasTool1 = false;
 
     private Rigidbody2D rb;
     private PlayerSwitcher playerSwitcher;
     public bool isCurrentPlayer1 = true; // Added to track if this player is the current player
     public PlayerSwitcher PS;
-    public bool isTouching = false;
+    public bool isTouching1 = false;
 
     void Start()
     {
@@ -67,15 +67,16 @@ public class PlayerController1 : MonoBehaviour
 
     public void CollectTool1()
     {
-        hasTool = true;
+        hasTool1 = true;
     }
 
-    public void UseTool(Collider2D rockCollider)
+    public void UseTool1()
     {
-        if (rockCollider.CompareTag("Rock"))
+        if (this.CompareTag("Rock"))
         {
             // Destroy the rock obstacle
-            isTouching = true;
+            isTouching1 = true;
         }
     }
+
 }

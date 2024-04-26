@@ -3,6 +3,9 @@ using UnityEngine;
 public class Rock : MonoBehaviour
 {
     private bool shouldDestroy = false;
+    public PlayerController1 PC1;
+    public PlayerController2 PC2;
+
 
     void Update()
     {
@@ -12,17 +15,12 @@ public class Rock : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        PlayerController1 PC1 = other.GetComponent<PlayerController1>();
-        PlayerController2 PC2 = other.GetComponent<PlayerController2>();
 
-        if (PC1 != null && PC2 != null)
-        {
-            if (PC1.hasTool && PC2.hasTool && PC1.isTouching && PC2.isTouching)
-            {
-                shouldDestroy = true;
-            }
-        }
+
+        PC1.UseTool1();
+        PC2.UseTool2();
+        
     }
 }
