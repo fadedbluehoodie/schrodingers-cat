@@ -432,7 +432,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1508607737, guid: c493e876e8da86e448a41e4b7567e533, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -706376507, guid: c493e876e8da86e448a41e4b7567e533, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1049,6 +1049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 935086658}
   - component: {fileID: 935086657}
+  - component: {fileID: 935086659}
   m_Layer: 0
   m_Name: WireTask
   m_TagString: Untagged
@@ -1068,10 +1069,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80efa1c589121c2439cdc08040ded59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wireColors:
-  - {r: 0.01127799, g: 0.7088321, b: 0.99622643, a: 0}
-  _LeftWires: []
-  _RightWires: []
+  wireColors: []
+  leftWires: []
+  rightWires: []
 --- !u!4 &935086658
 Transform:
   m_ObjectHideFlags: 0
@@ -1087,6 +1087,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &935086659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935086656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798861cb090f7bd41a29aeb059a925a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wire: {fileID: 880616279}
 --- !u!1 &981464397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,7 +1158,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 831405515, guid: c493e876e8da86e448a41e4b7567e533, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1233,7 +1246,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1082691376, guid: c493e876e8da86e448a41e4b7567e533, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1565,7 +1578,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1847865612, guid: c493e876e8da86e448a41e4b7567e533, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1653,7 +1666,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 850666716, guid: c493e876e8da86e448a41e4b7567e533, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

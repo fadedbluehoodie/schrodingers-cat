@@ -1,20 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; // Import UnityEngine.UI namespace to use Image component
 
 public class Wire : MonoBehaviour
 {
-    private Image _image; // Private field to store reference to the Image component
+    private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
-        _image = GetComponent<Image>(); // Get Image component attached to the same GameObject
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Get the SpriteRenderer component attached to this GameObject
     }
 
-    // Public method to set the color of the Image component
+    // Method to change the color of the wire
     public void SetColor(Color color)
     {
-        _image.color = color; // Set the color of the Image component
+        spriteRenderer.color = color; // Set the color of the SpriteRenderer component
     }
 }

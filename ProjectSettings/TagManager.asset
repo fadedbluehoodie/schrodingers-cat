@@ -11,6 +11,7 @@ TagManager:
   - Tool2
   - Player1
   - Player2
+  - Rock
   layers:
   - Default
   - TransparentFX

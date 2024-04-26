@@ -10,6 +10,7 @@ public class PlayerController1 : MonoBehaviour
     public bool isCurrentPlayer1 = true; // Added to track if this player is the current player
     public PlayerSwitcher PS;
     public bool isTouching1 = false;
+    public bool destroy1 = false;
 
     void Start()
     {
@@ -76,6 +77,8 @@ public class PlayerController1 : MonoBehaviour
         {
             // Destroy the rock obstacle
             isTouching1 = true;
+            destroy1 = true;
+
         }
     }
 
