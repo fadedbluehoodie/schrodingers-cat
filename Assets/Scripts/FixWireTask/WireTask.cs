@@ -4,36 +4,36 @@ using UnityEngine;
 
 public class WireTask : MonoBehaviour
 {
+    // Public lists to hold wire colors and assigned left/right wires
     public List<Color> _wireColors = new List<Color>();
     public List<Color> _LeftWires = new List<Color>();
     public List<Color> _RightWires = new List<Color>();
 
-    private List<Color> _availableColors;
-    private List<int> _availableLeftWireIndex;
-    private List<int> _availableRightWireIndex;
-
     private void Start()
     {
-        _availableColors = new List<Color>(_wireColors);
-        _availableLeftWireIndex = new List<int>();
-        _availableRightWireIndex = new List<int>();
-
-        for (int i = 0; i < _LeftWires.Count; i++) { _availableLeftWireIndex.Add(i); }
-        for (int i = 0; i < _RightWires.Count; i++) { _availableRightWireIndex.Add(i); }
-
-        while (_availableColors.Count > 0 && _availableLeftWireIndex.Count > 0 && _availableRightWireIndex.Count > 0)
+        // Ensure there are enough colors for each pair of wires
+        if (_wireColors.Count < Mathf.Max(_LeftWires.Count, _RightWires.Count))
         {
-            Color pickedColor = _availableColors[Random.Range(0, _availableColors.Count)];
+            Debug.LogError("Not enough colors for wires.");
+            return;
+        }
 
-            int pickedLeftWireIndex = Random.Range(0, _availableLeftWireIndex.Count);
-            int pickedRightWireIndex = Random.Range(0, _availableRightWireIndex.Count);
+        List<int> availableIndices = new List<int>();
+        for (int i = 0; i < _wireColors.Count; i++)
+        {
+            availableIndices.Add(i);
+        }
 
-            _LeftWires[_availableLeftWireIndex[pickedLeftWireIndex]] = pickedColor;
-            _RightWires[_availableRightWireIndex[pickedRightWireIndex]] = pickedColor;
+        // Assign colors to wire pairs
+        for (int i = 0; i < Mathf.Min(_LeftWires.Count, _RightWires.Count); i++)
+        {
+            // Choose a random color and assign it to both left and right wires
+            int colorIndex = Random.Range(0, availableIndices.Count);
+            int color = availableIndices[colorIndex];
+            _LeftWires[i] = _RightWires[i] = _wireColors[color];
 
-            _availableColors.Remove(pickedColor);
-            _availableLeftWireIndex.RemoveAt(pickedLeftWireIndex);
-            _availableRightWireIndex.RemoveAt(pickedRightWireIndex);
+            // Remove the chosen color from available indices to ensure uniqueness
+            availableIndices.RemoveAt(colorIndex);
         }
     }
 }
