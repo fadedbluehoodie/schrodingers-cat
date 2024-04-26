@@ -1,0 +1,1469 @@
+fileFormatVersion: 2
+guid: c493e876e8da86e448a41e4b7567e533
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wire_Task_Assets_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1154
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f2c778a519542478832de506c478ea
+      internalID: -1954128494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1182
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc2a4963ac3f044d948dd1b3d189387
+      internalID: -917360471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_2
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1150
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d64753f18648e4f8494468b3f96483
+      internalID: -1406246212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_3
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1147
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec9fbe68c45cb548adc79f983e0a1e9
+      internalID: -1064238580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_4
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1149
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf636b3f75375c44b8e1e4ab874b72de
+      internalID: 1869923615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1151
+        width: 5
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b653403e79c8e5c458e83ab72f37c3ad
+      internalID: 580173451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_6
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1158
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d54f0e451b45694e83a4ee5530bbfc5
+      internalID: -1175956739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_7
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1150
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e7d01523c3e364597415599e394270
+      internalID: -691603878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_8
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1152
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9367b8a001872b84eb3db80032da8046
+      internalID: 902009888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_9
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1153
+        width: 12
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f87c15376d4ee4299ee54cf3dce467
+      internalID: 1854082803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_10
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 1144
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a23bfb2b709b1d44915ecff9024d5f1
+      internalID: -33114319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_11
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1149
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3a7a4407601b14b8c430b82cfd8f46
+      internalID: -793072626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_12
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1151
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4cca4aee9d323d4cb0c331431fb6609
+      internalID: -1128573992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1147
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae1cc36f3ef5dc4890918bbf665534b
+      internalID: 1034653249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_14
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1149
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b564361a6afd7e41ae6ed46c2304614
+      internalID: 1591060234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_15
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1080
+        width: 370
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ebaa44881ac6b40afb08c531b1113b
+      internalID: -1183436574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_16
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1057
+        width: 260
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c347bd02ab1f08149a783d37eef18442
+      internalID: -706376507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_17
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 1057
+        width: 151
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c222459423673478c9d9a598bfa7c0
+      internalID: -1023151592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_18
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 916
+        width: 244
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c6c29aebe0aa84d8b7927d7473cf86
+      internalID: 474222102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_19
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 928
+        width: 166
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4563aa266178f145b3153a44bd55c8f
+      internalID: -1523607975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_20
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 976
+        width: 139
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32a777b52179b14aa55b74b730de8f9
+      internalID: 612878575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_21
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 686
+        width: 166
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381d1dd456e1563419f4b255993afaa8
+      internalID: -93074858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_22
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 853
+        width: 267
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f205942d68fef3f4987c88fc4da7ebb5
+      internalID: 850666716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_23
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 853
+        width: 148
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac28a84c8c527df4fa1355247d46c8ca
+      internalID: -813053538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_24
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 716
+        width: 246
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ddd4b57550062748a89fa63a85d20bc
+      internalID: 1419831025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_25
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 656
+        width: 260
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b84570d23ec6f4cb091628198c7a84
+      internalID: -1082691376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_26
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 602
+        width: 153
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b4df81d08ad4a41aadae15194f4950
+      internalID: -394652755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_27
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 508
+        width: 249
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42874395c5754ef46b890bf00a1b5fdf
+      internalID: -585151898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_28
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 474
+        width: 169
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f73be0480065a479b4910560bb2827
+      internalID: -1023951171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_29
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 449
+        width: 259
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3965a91a96ed2f945ab3bb8fbc2a4fc8
+      internalID: 1847865612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_30
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 449
+        width: 152
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625192e74abc9014695ac52d8b6f3460
+      internalID: -492954628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_31
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 332
+        width: 241
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676edf090363ae140acc178b5946b999
+      internalID: 707348555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_32
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 332
+        width: 174
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0108c3df6f6a89847b227cb0752ab0f9
+      internalID: 311182930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_33
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 243
+        width: 263
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c72d51df01bd143864c01e9bec2f36
+      internalID: 831405515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_34
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 243
+        width: 155
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede3c879ca5f9fe49877fe7436d7db98
+      internalID: 1272882828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_35
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 201
+        width: 149
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d9bc5cf31fd2148983e451ddea3323
+      internalID: -1479197181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_36
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 112
+        width: 15
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8beac73879fb8149a493871c6322745
+      internalID: 1318871669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_37
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 66
+        width: 83
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5217f6464f4dde049856ffc85d9759c7
+      internalID: 1861166701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_38
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 49
+        width: 260
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4479d994083384aaf477e5a257d2dd
+      internalID: 1508607737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_39
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 48
+        width: 155
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab291040e1ae99469a8afa139e1a3d1
+      internalID: 1392017740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_40
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 75
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a852e2364a55974781dafaa11eb0cf0
+      internalID: 1249986327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_41
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 102
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82be1a7a0d3564146acba8d29a89f0ab
+      internalID: -149364369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_42
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 105
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa817903481a1244eaf1a843ab65ef9b
+      internalID: -956063573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_43
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 77
+        width: 4
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28a3aa127fb02543ac8d484a8227b57
+      internalID: 214738156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_44
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 78
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35dbae086d09fc49b89340ac138c62a
+      internalID: -1291623949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_45
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 76
+        width: 5
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b903e0d653eade4ca81542e919f168d
+      internalID: -1242100408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_46
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 69
+        width: 11
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65aa9fe86a311c48bd707988b20a9a7
+      internalID: 736625343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_47
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 76
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d95df9da21eae4ba2140868e1a2a79
+      internalID: -540192860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_48
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 80
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ea210dd6859b84cbc9c6e2d12c5104
+      internalID: 594587900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_49
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 78
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e69bb577ba8414f989f009794fb945
+      internalID: 1214439111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_50
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 76
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7f4603bf6a5264698a316c5b3eb2ed
+      internalID: 1056844730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_51
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 34
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317f88eb55dbb674b8cd312fb6f11c3a
+      internalID: 100437910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_52
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 39
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6774371796df2b9419e50e0e5222709f
+      internalID: -1607722409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_53
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 17
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70f9e269ee489b4fa32079ba4d9d0c2
+      internalID: 1028227737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_54
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 22
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfc593acb5140d4ab00ff3c8c7bc133
+      internalID: -819631690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_55
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 18
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114a1b22063e9d345ac7de1048351d65
+      internalID: -830058616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_56
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 17
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa8a1d3825d46540bc334f4a0e05dfe
+      internalID: 1677949545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_57
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 21
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbd128cfe265e7449f1b6f8594caf0c
+      internalID: 2044837514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_58
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 14
+        width: 7
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17002513c21cb4c4c8ddb1ec95029f76
+      internalID: -1346409148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_59
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 19
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415fad29e0837794ab7cf25a338b2e72
+      internalID: 2046582507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_Task_Assets_60
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 20
+        width: 31
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92abecaedd29899409d8d21698c62d1c
+      internalID: 226146641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Wire_Task_Assets_0: -1954128494
+      Wire_Task_Assets_1: -917360471
+      Wire_Task_Assets_10: -33114319
+      Wire_Task_Assets_11: -793072626
+      Wire_Task_Assets_12: -1128573992
+      Wire_Task_Assets_13: 1034653249
+      Wire_Task_Assets_14: 1591060234
+      Wire_Task_Assets_15: -1183436574
+      Wire_Task_Assets_16: -706376507
+      Wire_Task_Assets_17: -1023151592
+      Wire_Task_Assets_18: 474222102
+      Wire_Task_Assets_19: -1523607975
+      Wire_Task_Assets_2: -1406246212
+      Wire_Task_Assets_20: 612878575
+      Wire_Task_Assets_21: -93074858
+      Wire_Task_Assets_22: 850666716
+      Wire_Task_Assets_23: -813053538
+      Wire_Task_Assets_24: 1419831025
+      Wire_Task_Assets_25: -1082691376
+      Wire_Task_Assets_26: -394652755
+      Wire_Task_Assets_27: -585151898
+      Wire_Task_Assets_28: -1023951171
+      Wire_Task_Assets_29: 1847865612
+      Wire_Task_Assets_3: -1064238580
+      Wire_Task_Assets_30: -492954628
+      Wire_Task_Assets_31: 707348555
+      Wire_Task_Assets_32: 311182930
+      Wire_Task_Assets_33: 831405515
+      Wire_Task_Assets_34: 1272882828
+      Wire_Task_Assets_35: -1479197181
+      Wire_Task_Assets_36: 1318871669
+      Wire_Task_Assets_37: 1861166701
+      Wire_Task_Assets_38: 1508607737
+      Wire_Task_Assets_39: 1392017740
+      Wire_Task_Assets_4: 1869923615
+      Wire_Task_Assets_40: 1249986327
+      Wire_Task_Assets_41: -149364369
+      Wire_Task_Assets_42: -956063573
+      Wire_Task_Assets_43: 214738156
+      Wire_Task_Assets_44: -1291623949
+      Wire_Task_Assets_45: -1242100408
+      Wire_Task_Assets_46: 736625343
+      Wire_Task_Assets_47: -540192860
+      Wire_Task_Assets_48: 594587900
+      Wire_Task_Assets_49: 1214439111
+      Wire_Task_Assets_5: 580173451
+      Wire_Task_Assets_50: 1056844730
+      Wire_Task_Assets_51: 100437910
+      Wire_Task_Assets_52: -1607722409
+      Wire_Task_Assets_53: 1028227737
+      Wire_Task_Assets_54: -819631690
+      Wire_Task_Assets_55: -830058616
+      Wire_Task_Assets_56: 1677949545
+      Wire_Task_Assets_57: 2044837514
+      Wire_Task_Assets_58: -1346409148
+      Wire_Task_Assets_59: 2046582507
+      Wire_Task_Assets_6: -1175956739
+      Wire_Task_Assets_60: 226146641
+      Wire_Task_Assets_7: -691603878
+      Wire_Task_Assets_8: 902009888
+      Wire_Task_Assets_9: 1854082803
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
