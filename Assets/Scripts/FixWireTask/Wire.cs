@@ -2,16 +2,23 @@ using UnityEngine;
 
 public class Wire : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer _spriteRenderer; // Private field to store reference to the SpriteRenderer component
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>(); // Get the SpriteRenderer component attached to this GameObject
+        _spriteRenderer = GetComponent<SpriteRenderer>(); // Get SpriteRenderer component attached to the same GameObject
     }
 
-    // Method to change the color of the wire
+    // Public method to set the color of the SpriteRenderer component
     public void SetColor(Color color)
     {
-        spriteRenderer.color = color; // Set the color of the SpriteRenderer component
+        if (_spriteRenderer != null)
+        {
+            _spriteRenderer.color = color; // Set the color of the SpriteRenderer component
+        }
+        else
+        {
+            Debug.LogWarning("SpriteRenderer component is missing on the Wire GameObject.");
+        }
     }
 }
