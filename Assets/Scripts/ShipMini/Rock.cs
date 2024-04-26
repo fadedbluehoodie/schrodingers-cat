@@ -2,27 +2,27 @@ using UnityEngine;
 
 public class Rock : MonoBehaviour
 {
-    private bool isDestroyed = false;
-    public PlayerController1 PC1;
-    public PlayerController2 PC2;
-    
+    private bool shouldDestroy = false;
+
+    void Update()
+    {
+        if (shouldDestroy)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(PC1.hasTool && PC2.hasTool)
+        PlayerController1 PC1 = other.GetComponent<PlayerController1>();
+        PlayerController2 PC2 = other.GetComponent<PlayerController2>();
+
+        if (PC1 != null && PC2 != null)
         {
-            if(PC1.isTouching && PC2.isTouching)
+            if (PC1.hasTool && PC2.hasTool && PC1.isTouching && PC2.isTouching)
             {
-                Destroy(gameObject);
+                shouldDestroy = true;
             }
         }
-        /*if (!isDestroyed && other.CompareTag("Player"))
-        {
-            PlayerController playerController = other.GetComponent<PlayerController>();
-            if (playerController != null)
-            {
-              //  playerController.UseTool(gameObject);
-                isDestroyed = true;
-            }
-        }*/
     }
 }
