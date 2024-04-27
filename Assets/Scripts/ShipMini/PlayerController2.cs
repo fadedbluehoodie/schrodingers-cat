@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController2 : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class PlayerController2 : MonoBehaviour
     public bool isTouching2 = false;
     public PlayerSwitcher PS;
     public bool destroy2 = false;
+    public PlayerController1 PC1;
+
 
     void Start()
     {
@@ -18,6 +22,28 @@ public class PlayerController2 : MonoBehaviour
         
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Rock"))
+        {
+
+            if (hasTool2)
+            {
+                if (PC1.isTouching1)
+                {
+
+                    Destroy(other.gameObject);
+
+
+                    // Load the new scene
+                    SceneManager.LoadScene(4);
+                }
+            }
+        }
+            
+        
+            
+    }
     void Update()
     {
         /*
@@ -32,7 +58,9 @@ public class PlayerController2 : MonoBehaviour
 
 
         // Only process movement input if the player controller is enabled and is the current player
-     
+
+       
+
         if (Input.GetKeyDown(KeyCode.E))
         {
 

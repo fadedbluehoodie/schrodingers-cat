@@ -31,7 +31,6 @@ public class Rock : MonoBehaviour
         // Destroy the rock GameObject
         Destroy(gameObject);
 
-        // Load the new scene
-        SceneManager.LoadScene(4);
+        
     }
 }

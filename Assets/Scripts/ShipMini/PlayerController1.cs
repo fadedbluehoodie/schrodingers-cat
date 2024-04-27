@@ -12,6 +12,9 @@ public class PlayerController1 : MonoBehaviour
     public bool isTouching1 = false;
     public bool destroy1 = false;
 
+
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -81,5 +84,11 @@ public class PlayerController1 : MonoBehaviour
 
         }
     }
-
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Rock"))
+        {
+            isTouching1 = true;
+        }
+    }
 }
