@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/PuzzleSlider1.unity
     guid: 45c0a0180722c6144a7ad7fade855ff7
   - enabled: 1
     path: Assets/Scenes/Intro.unity
@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroVideo.unity
     guid: 98b458ad2e2d03a46898f05d9e997d31
+  - enabled: 1
+    path: Assets/Scenes/ShipMini.unity
+    guid: 19f42aeef9556b0489fd7722cf163341
+  - enabled: 1
+    path: Assets/Scenes/Zoomz.unity
+    guid: d97bbc98df83387469d24083f86c226c
   m_configObjects: {}

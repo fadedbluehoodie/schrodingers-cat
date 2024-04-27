@@ -2297,6 +2297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC1: {fileID: 1552268383}
   PC2: {fileID: 123222359}
+  sceneToLoad: 4
 --- !u!4 &1269985434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1136704123481033604, guid: 62476e5c34d289545bb097b8f9d6eeeb, type: 3}
