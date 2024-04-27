@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 
 public class DoubleClickZoom : MonoBehaviour, IPointerClickHandler
 {
-    bool zoomedIn = false;
+    public bool zoomedIn = false;
     float lastClickTime;
     float catchTime = 0.25f; // Adjust this value to suit your needs
     float scaleFactor = 2f; // Adjust this value to set the zoom level
@@ -164,5 +164,6 @@ public class DoubleClickZoom : MonoBehaviour, IPointerClickHandler
         rt.sizeDelta = originalSize;
         rt.localPosition = Vector3.zero;
         currentPannel = -1;
+        zoomedIn = false;
     }
 }

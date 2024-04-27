@@ -168,16 +168,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Intro1: {fileID: 1607518486727196312, guid: 52ec05c53ffe54f4f91d23a2337f857e, type: 3}
-  Intro2: {fileID: 0}
-  Intro3: {fileID: 0}
-  Intro4: {fileID: 1607518486727196312, guid: f54bdeb8c52990d4b965d33af8bcf1c1, type: 3}
-  Intro5: {fileID: 0}
-  Intro6: {fileID: 0}
-  Ishmael1: {fileID: 0}
-  Ishmael2: {fileID: 0}
-  Ishmael3: {fileID: 0}
-  Ishmael4: {fileID: 0}
-  Ishmael5: {fileID: 1607518486727196312, guid: 39f161b2d15ce30448080f803d57c11f, type: 3}
+  Intro2: {fileID: 1607518486727196312, guid: 61c7c9cf322d97f45a32dd44bf8d8fc3, type: 3}
+  Intro3: {fileID: 1607518486727196312, guid: e43ff3c311ba0424da55243873ff26e8, type: 3}
+  Intro4: {fileID: 1607518486727196312, guid: 847a0477ff69b9a4e92bfe7b5f9a54b4, type: 3}
+  Intro4dot5: {fileID: 1607518486727196312, guid: f54bdeb8c52990d4b965d33af8bcf1c1, type: 3}
+  Intro5: {fileID: 1607518486727196312, guid: 32a45d290c6d3aa45a94cb67db6377cd, type: 3}
+  Intro6: {fileID: 1607518486727196312, guid: 35e266229781fd04181a8934a75fd3ef, type: 3}
+  Ishmael1: {fileID: 1607518486727196312, guid: ccc156fce47ebe3439b442a3b3d96c7c, type: 3}
+  Ishmael2: {fileID: 1607518486727196312, guid: 8c8fbd2cf9f87b346944d4c7b1f040f5, type: 3}
+  Ishmael3: {fileID: 1607518486727196312, guid: ea8a9692aaed64e428589c511af62021, type: 3}
+  Ishmael4_5: {fileID: 1607518486727196312, guid: 39f161b2d15ce30448080f803d57c11f, type: 3}
   Ishmael6: {fileID: 1607518486727196312, guid: 827cab5737a40bf488ac6968126997bf, type: 3}
   Ishmael7: {fileID: 0}
   Sydney1: {fileID: 1607518486727196312, guid: 7f8fc1d3d36254843b22a47d19b9e63c, type: 3}
@@ -187,9 +187,8 @@ MonoBehaviour:
   Sydney5: {fileID: 1607518486727196312, guid: 6b95122da36cabf42a5857f9f99be41e, type: 3}
   Sydney6: {fileID: 1607518486727196312, guid: a1d564db0b2f726408fe5d7564945547, type: 3}
   Sydney7: {fileID: 1607518486727196312, guid: 5b5f4dd2d1192984183625b8cd2eab05, type: 3}
-  Finale1: {fileID: 0}
-  Finale2: {fileID: 0}
-  Finale3: {fileID: 1607518486727196312, guid: 5cb1ba967bba1564c9e4a682e2f03329, type: 3}
+  Finale1: {fileID: 1607518486727196312, guid: c85a452636bb4b14982fadb11e3d8a44, type: 3}
+  Finale2_3: {fileID: 1607518486727196312, guid: 5cb1ba967bba1564c9e4a682e2f03329, type: 3}
   Finale4: {fileID: 1607518486727196312, guid: 0fd2229020aef604d850b6a87741ec96, type: 3}
   Finale5: {fileID: 1607518486727196312, guid: 93fe0242739a7ed47910827b6104115c, type: 3}
 --- !u!1 &518077659
