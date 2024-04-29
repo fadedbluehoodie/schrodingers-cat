@@ -1,60 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement; // Import the SceneManager namespace
 using UnityEngine;
-using System.Linq;
+using System.Collections.Generic;
 
 public class PageController : MonoBehaviour
 {
-
-    //List of Pannels. This will get LONG
-    [SerializeField] GameObject Intro1; //Go to Emergency Restabilization 1
+    [SerializeField] GameObject Intro1; // Go to Emergency Restabilization 1
     [SerializeField] GameObject Intro2;
-    [SerializeField] GameObject Intro3; 
-    [SerializeField] GameObject Intro4; //Go to Intro Video
-    [SerializeField] GameObject Intro4dot5; //Go to Ship Repair 1
+    [SerializeField] GameObject Intro3;
+    [SerializeField] GameObject Intro4; // Go to Intro Video
+    [SerializeField] GameObject Intro4dot5; // Go to Ship Repair 1
     [SerializeField] GameObject Intro5;
-    [SerializeField] GameObject Intro6; //Go to Choice
+    [SerializeField] GameObject Intro6; // Go to Choice
     [SerializeField] GameObject Ishmael1;
-    [SerializeField] GameObject Ishmael2; //Go to Emergency Restabilization 2
+    [SerializeField] GameObject Ishmael2; // Go to Emergency Restabilization 2
     [SerializeField] GameObject Ishmael3;
     [SerializeField] GameObject Ishmael4_5;
-    [SerializeField] GameObject Ishmael6; //Go to Ship Repair 2
-    //[SerializeField] GameObject Ishmael7; //Go back to Choice
+    [SerializeField] GameObject Ishmael6; // Go to Ship Repair 2
     [SerializeField] GameObject Sydney1;
-    [SerializeField] GameObject Sydney2; //Go to Emergency Restabilization 3
-    [SerializeField] GameObject Sydney3; 
+    [SerializeField] GameObject Sydney2; // Go to Emergency Restabilization 3
+    [SerializeField] GameObject Sydney3;
     [SerializeField] GameObject Sydney4;
-    [SerializeField] GameObject Sydney5; //Go to Ship Repair 3
+    [SerializeField] GameObject Sydney5; // Go to Ship Repair 3
     [SerializeField] GameObject Sydney6;
-    [SerializeField] GameObject Sydney7; //Go back to Choice
-    [SerializeField] GameObject Finale1; //Go to Ship Run game, then Ending Video
+    [SerializeField] GameObject Sydney7; // Go back to Choice
+    [SerializeField] GameObject Finale1; // Go to Ship Run game, then Ending Video
     [SerializeField] GameObject Finale2_3;
     [SerializeField] GameObject Finale4;
     [SerializeField] GameObject Finale5;
-    
+
     List<GameObject> pageIndex = new List<GameObject>();
     int currentIndex = -1;
-    
-    
+    bool hasVisitedScene = false; // Flag to track if the player has visited the different scene
 
-    
     // Start is called before the first frame update
     void Start()
     {
-        //This is gonna suuuck
         pageIndex.Add(Intro1);
         pageIndex.Add(Intro2);
         pageIndex.Add(Intro3);
         pageIndex.Add(Intro4);
         pageIndex.Add(Intro4dot5);
         pageIndex.Add(Intro5);
+        pageIndex.Add(Intro6);
         pageIndex.Add(Ishmael1);
         pageIndex.Add(Ishmael2);
         pageIndex.Add(Ishmael3);
         pageIndex.Add(Ishmael4_5);
         pageIndex.Add(Ishmael6);
-        //pageIndex.Add(Ishmael7);
         pageIndex.Add(Sydney1);
         pageIndex.Add(Sydney2);
         pageIndex.Add(Sydney3);
@@ -67,31 +59,67 @@ public class PageController : MonoBehaviour
         pageIndex.Add(Finale4);
         pageIndex.Add(Finale5);
 
-        GameObject chosenPage = pageIndex.ElementAt(0);
+        GameObject chosenPage = pageIndex[0]; // Start at page 1 initially
         GameObject newPage = Instantiate(chosenPage, this.transform);
         currentIndex = pageIndex.IndexOf(chosenPage);
-        //NewPage(pageIndex.ElementAt(0)); //Switch this to pageIndex[Whatever] for whichever one you want to start on
+
+        // Load the stored currentIndex or default to 0
+        currentIndex = PlayerPrefs.GetInt("CurrentPageIndex", 0);
+        // Check if the player has visited the mini-game scene
+        hasVisitedScene = PlayerPrefs.GetInt("HasVisitedScene", 0) == 1;
+        // If the player has visited the scene, set currentIndex to Intro5
+        if (hasVisitedScene)
+        {
+            currentIndex = pageIndex.IndexOf(Intro5);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.DownArrow) && transform.childCount == 1)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && transform.childCount == 1)
         {
-            NewPage(pageIndex[currentIndex + 1]); //This is for standard cases. If we have any special cases, we need an If statement and put this in the Else statment
+            NewPage(pageIndex[currentIndex + 1]); // This is for standard cases
         }
     }
 
     void NewPage(GameObject chosenPage)
     {
         GameObject oldPage = transform.GetChild(0).gameObject;
-        if(oldPage.GetComponent<DoubleClickZoom>().zoomedIn == false)
+        if (oldPage.GetComponent<DoubleClickZoom>().zoomedIn == false)
         {
-            oldPage.GetComponent<PageFly>().isGoing = true; //Flies the old page up
-            GameObject newPage = Instantiate(chosenPage, this.transform);
-            newPage.transform.SetAsFirstSibling();
+            oldPage.GetComponent<PageFly>().isGoing = true; // Flies the old page up
+
+            if (pageIndex[currentIndex] == Intro4 && !hasVisitedScene) // Check if the current page is Intro4 and the player hasn't visited the scene yet
+            {
+                hasVisitedScene = true; // Set the flag to true
+                LoadNewScene("ShipMini"); // Load the new scene
+                return; // Exit the method early to prevent instantiating the new page
+            }
 
             currentIndex = pageIndex.IndexOf(chosenPage);
+
+            // Check if the current page is Intro4 and the player has visited the scene
+            if (pageIndex[currentIndex] == Intro4 && hasVisitedScene)
+            {
+                currentIndex = pageIndex.IndexOf(Intro5); // Set currentIndex to Intro5
+            }
+
+            GameObject newPage = Instantiate(chosenPage, this.transform);
+            newPage.transform.SetAsFirstSibling();
         }
+    }
+
+    void LoadNewScene(string ShipMini)
+    {
+        // Load the scene with the given name
+        SceneManager.LoadScene(ShipMini);
+    }
+
+    private void OnDestroy()
+    {
+        // Save the current index and whether the scene has been visited
+        PlayerPrefs.SetInt("CurrentPageIndex", currentIndex);
+        PlayerPrefs.SetInt("HasVisitedScene", hasVisitedScene ? 1 : 0);
     }
 }
