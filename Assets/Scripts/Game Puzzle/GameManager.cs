@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private Transform gameTransform;
     [SerializeField] private Transform[] piecePrefabs;
+    [SerializeField] private Button confirmButton; // Reference to the UI button
 
     private List<Transform> pieces;
     private int emptyLocation;
@@ -60,11 +62,17 @@ public class GameManager : MonoBehaviour
         pieces = new List<Transform>();
         size = 3;
         CreateGamePieces(0.01f);
+
+        // Add listener to the UI button
+        confirmButton.onClick.AddListener(OnConfirmButtonClick);
+
+        // Shuffle the puzzle automatically when the scene starts
+        ShuffleAndCheck();
     }
 
     void Update()
     {
-        if (!shuffling && !puzzleCompleted)
+        if (!puzzleCompleted)
         {
             if (CheckCompletion())
             {
@@ -72,30 +80,28 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (!puzzleCompleted && Input.GetMouseButton(0))
+        if (!puzzleCompleted)
         {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (hit)
+            if (Input.GetMouseButton(0))
             {
-                //Go through the list, the index tells us the position.
-                for (int i = 0; i < pieces.Count; i++)
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+                if (hit)
                 {
-                    if (pieces[i] == hit.transform)
+                    //Go through the list, the index tells us the position.
+                    for (int i = 0; i < pieces.Count; i++)
                     {
-                        // Check each direction to see if valid move.
-                        // We break out on success so we don't carry on and swap back again.
-                        if (SwapIfValid(i, -size, size)) { break; }
-                        if (SwapIfValid(i, size, size)) { break; }
-                        if (SwapIfValid(i, -1, i / size)) { break; }
-                        if (SwapIfValid(i, 1, (i + 1) / size)) { break; }
+                        if (pieces[i] == hit.transform)
+                        {
+                            // Check each direction to see if valid move.
+                            // We break out on success so we don't carry on and swap back again.
+                            if (SwapIfValid(i, -size, size)) { break; }
+                            if (SwapIfValid(i, size, size)) { break; }
+                            if (SwapIfValid(i, -1, i / size)) { break; }
+                            if (SwapIfValid(i, 1, (i + 1) / size)) { break; }
+                        }
                     }
                 }
             }
-        }
-
-        if (puzzleCompleted && !shuffling)
-        {
-            StartCoroutine(WaitAndLoadScene(0.5f, "Paiges"));
         }
     }
 
@@ -111,16 +117,34 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    private IEnumerator WaitAndLoadScene(float duration, string Paiges)
+    private void OnConfirmButtonClick()
     {
-        shuffling = true;
-        yield return new WaitForSeconds(duration);
-        Shuffle();
-        yield return new WaitForSeconds(duration);
-        SceneManager.LoadScene(Paiges);
+        if (puzzleCompleted)
+        {
+            SceneManager.LoadScene("Paiges");
+        }
+        else
+        {
+            Debug.Log("Puzzle is not completed yet!");
+            // You can display a message to the player indicating that the puzzle is not complete
+        }
     }
 
-    // Brute force shuffling
+    private void ShuffleAndCheck()
+    {
+        StartCoroutine(ShuffleAndCheckCoroutine());
+    }
+
+    private IEnumerator ShuffleAndCheckCoroutine()
+    {
+        shuffling = true;
+        yield return new WaitForSeconds(0.5f);
+        Shuffle();
+        yield return new WaitForSeconds(0.5f);
+        puzzleCompleted = CheckCompletion();
+        shuffling = false;
+    }
+
     private void Shuffle()
     {
         int count = 0;
