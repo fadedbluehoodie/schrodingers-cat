@@ -59,19 +59,26 @@ public class PageController : MonoBehaviour
         pageIndex.Add(Finale4);
         pageIndex.Add(Finale5);
 
-        GameObject chosenPage = pageIndex[0]; // Start at page 1 initially
-        GameObject newPage = Instantiate(chosenPage, this.transform);
-        currentIndex = pageIndex.IndexOf(chosenPage);
+        // Set currentIndex to page 1 initially
+        currentIndex = 0;
 
         // Load the stored currentIndex or default to 0
-        currentIndex = PlayerPrefs.GetInt("CurrentPageIndex", 0);
-        // Check if the player has visited the mini-game scene
-        hasVisitedScene = PlayerPrefs.GetInt("HasVisitedScene", 0) == 1;
-        // If the player has visited the scene, set currentIndex to Intro5
-        if (hasVisitedScene)
+        int storedIndex = PlayerPrefs.GetInt("CurrentPageIndex", -1);
+
+        // If the stored index is valid, use it
+        if (storedIndex >= 0 && storedIndex < pageIndex.Count)
+        {
+            currentIndex = storedIndex;
+        }
+        // If the player has visited the mini-game scene, start at page 5
+        if (PlayerPrefs.GetInt("HasVisitedScene", 0) == 1)
         {
             currentIndex = pageIndex.IndexOf(Intro5);
         }
+
+        GameObject chosenPage = pageIndex[currentIndex];
+        GameObject newPage = Instantiate(chosenPage, this.transform);
+        currentIndex = pageIndex.IndexOf(chosenPage);
     }
 
     // Update is called once per frame
