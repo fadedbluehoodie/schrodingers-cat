@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
     private int emptyLocation;
     private int size;
     private bool shuffling = false;
+    private bool puzzleCompleted = false;
 
     private void CreateGamePieces(float gapThickness)
     {
@@ -62,13 +64,15 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (!shuffling && CheckCompletion())
+        if (!shuffling && !puzzleCompleted)
         {
-            shuffling = true;
-            StartCoroutine(WaitShuffle(0.5f));
+            if (CheckCompletion())
+            {
+                puzzleCompleted = true;
+            }
         }
-        // On click Send out ray to see if we click a piece.
-        if (Input.GetMouseButton(0))
+
+        if (!puzzleCompleted && Input.GetMouseButton(0))
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hit)
@@ -88,6 +92,11 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+
+        if (puzzleCompleted && !shuffling)
+        {
+            StartCoroutine(WaitAndLoadScene(0.5f, "Paiges"));
+        }
     }
 
     private bool CheckCompletion()
@@ -102,11 +111,13 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    private IEnumerator WaitShuffle(float duration)
+    private IEnumerator WaitAndLoadScene(float duration, string Paiges)
     {
+        shuffling = true;
         yield return new WaitForSeconds(duration);
         Shuffle();
-        shuffling = false;
+        yield return new WaitForSeconds(duration);
+        SceneManager.LoadScene(Paiges);
     }
 
     // Brute force shuffling
