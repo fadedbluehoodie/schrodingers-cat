@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlackHole : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class BlackHole : MonoBehaviour
         {
             col2D.GetComponent<ShipScript>().isConsumed = true;
             consumePlayer = true;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

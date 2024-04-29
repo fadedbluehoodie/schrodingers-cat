@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Paiges.unity
     guid: d97bbc98df83387469d24083f86c226c
   - enabled: 1
-    path: Assets/Scenes/Decison.unity
-    guid: 8984db70ef7b5da46b174db6bfe24ebb
-  - enabled: 1
     path: Assets/Scenes/PuzzleSlider2.unity
     guid: a3933afbe3fcb83439458f48b2456bd2
   - enabled: 1
@@ -32,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShipRunScenes/ShipRunTutorial.unity
     guid: c01f0af2e2c4d9c40b0d5c103683e31a
+  - enabled: 1
+    path: Assets/Scenes/Decison.unity
+    guid: 8984db70ef7b5da46b174db6bfe24ebb
   m_configObjects: {}

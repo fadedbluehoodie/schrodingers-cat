@@ -29,8 +29,21 @@ public class PageController : MonoBehaviour
     [SerializeField] GameObject Finale5;
 
     List<GameObject> pageIndex = new List<GameObject>();
-    int currentIndex = -1;
-    bool hasVisitedScene = false; // Flag to track if the player has visited the different scene
+
+
+
+
+
+    public static int currentIndex = 0; //Currently Referenced in this script, DecisionManager, ShipGameManager, PlayerController2, ShipScript
+                                        //If we do end up adding Ishmael7, UPDATE THE SCRIPTS ABOVE!!!!
+
+
+
+
+
+
+
+    //bool hasVisitedScene = false; // Flag to track if the player has visited the different scene
 
     // Start is called before the first frame update
     void Start()
@@ -59,10 +72,7 @@ public class PageController : MonoBehaviour
         pageIndex.Add(Finale4);
         pageIndex.Add(Finale5);
 
-        // Set currentIndex to page 1 initially
-        currentIndex = 0;
-
-        // Load the stored currentIndex or default to 0
+        /*// Load the stored currentIndex or default to 0
         int storedIndex = PlayerPrefs.GetInt("CurrentPageIndex", -1);
 
         // If the stored index is valid, use it
@@ -74,7 +84,7 @@ public class PageController : MonoBehaviour
         if (PlayerPrefs.GetInt("HasVisitedScene", 0) == 1)
         {
             currentIndex = pageIndex.IndexOf(Intro5);
-        }
+        }*/
 
         GameObject chosenPage = pageIndex[currentIndex];
         GameObject newPage = Instantiate(chosenPage, this.transform);
@@ -86,7 +96,33 @@ public class PageController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.DownArrow) && transform.childCount == 1)
         {
-            NewPage(pageIndex[currentIndex + 1]); // This is for standard cases
+            /*if(currentIndex == 3) //Once they're about to take off
+            {
+                LoadNewScene("IntroVideo"); //Play the video
+            }
+            else */if(currentIndex == 4) //Once they've crashed...
+            {
+                LoadNewScene("ShipMini");  //Ship repair game
+            }
+            else if(currentIndex == 6 || currentIndex == 11 || currentIndex == 18) //If we've finished the Introduction or either Character story
+            {
+                if(DecisionManager.option1Taken && DecisionManager.option2Taken) //If we've gone through both storylines
+                {
+                    NewPage(pageIndex[19]); //Start Finale
+                }
+                else
+                {
+                    LoadNewScene("Decison"); //Otherwise go back to decision
+                }
+            }
+            else if(currentIndex == 19) //Once they take off...
+            {
+                LoadNewScene("ShipRunTutorial"); //Go to Ship Run Segment
+            }
+            else
+            {
+                NewPage(pageIndex[currentIndex + 1]); // This is for standard cases
+            }
         }
     }
 
@@ -97,20 +133,7 @@ public class PageController : MonoBehaviour
         {
             oldPage.GetComponent<PageFly>().isGoing = true; // Flies the old page up
 
-            if (pageIndex[currentIndex] == Intro4 && !hasVisitedScene) // Check if the current page is Intro4 and the player hasn't visited the scene yet
-            {
-                hasVisitedScene = true; // Set the flag to true
-                LoadNewScene("ShipMini"); // Load the new scene
-                return; // Exit the method early to prevent instantiating the new page
-            }
-
             currentIndex = pageIndex.IndexOf(chosenPage);
-
-            // Check if the current page is Intro4 and the player has visited the scene
-            if (pageIndex[currentIndex] == Intro4 && hasVisitedScene)
-            {
-                currentIndex = pageIndex.IndexOf(Intro5); // Set currentIndex to Intro5
-            }
 
             GameObject newPage = Instantiate(chosenPage, this.transform);
             newPage.transform.SetAsFirstSibling();
@@ -121,12 +144,5 @@ public class PageController : MonoBehaviour
     {
         // Load the scene with the given name
         SceneManager.LoadScene(ShipMini);
-    }
-
-    private void OnDestroy()
-    {
-        // Save the current index and whether the scene has been visited
-        PlayerPrefs.SetInt("CurrentPageIndex", currentIndex);
-        PlayerPrefs.SetInt("HasVisitedScene", hasVisitedScene ? 1 : 0);
     }
 }
