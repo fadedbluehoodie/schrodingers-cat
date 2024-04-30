@@ -8,7 +8,7 @@ public class DoubleClickZoom : MonoBehaviour, IPointerClickHandler
     public bool zoomedIn = false;
     float lastClickTime;
     float catchTime = 0.25f; // Adjust this value to suit your needs
-    float scaleFactor = 2f; // Adjust this value to set the zoom level
+    [SerializeField] float scaleFactor = 5.5f; // Adjust this value to set the zoom level
 
     Vector2 referencePoint = new Vector2(0.5f, 0.5f); // Center of the panel
     Vector2 originalSize;
@@ -124,8 +124,8 @@ public class DoubleClickZoom : MonoBehaviour, IPointerClickHandler
                 (referencePoint.y - 0.5f) * rt.rect.height
             );
             Vector2 localReferencePoint = new Vector2(
-                (newPos.x - rt.position.x) / rt.rect.width,
-                1.5f * ((newPos.y - rt.position.y) / rt.rect.height)
+                scaleFactor * ((newPos.x - rt.position.x) / rt.rect.width),
+                scaleFactor * ((newPos.y - rt.position.y) / rt.rect.height)
             );
             Vector2 offset = new Vector2(
                 (localReferencePoint.x * newSize.x) - referenceOffset.x,

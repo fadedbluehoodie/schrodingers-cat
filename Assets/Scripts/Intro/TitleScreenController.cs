@@ -21,6 +21,7 @@ public class TitleScreenController : MonoBehaviour
     void StartGame()
     {
         // Load the scene with the specified name
-        SceneManager.LoadScene(2);
+        //SceneManager.LoadScene(sceneToLoad);
+        SceneManager.LoadScene(1);
     }
 }

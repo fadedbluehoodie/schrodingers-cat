@@ -138,8 +138,7 @@ public class ShipScript : MonoBehaviour
         {
             Debug.Log("YOU WIN!");
             fallSpeed = 0;
-            PageController.currentIndex = 20;
-            SceneManager.LoadScene("Paiges");
+            SceneManager.LoadScene("EscapeVideo");
         }
     }
 

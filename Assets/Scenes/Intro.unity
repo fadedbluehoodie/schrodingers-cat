@@ -565,7 +565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: {fileID: 1996541356}
-  sceneToLoad: 2
+  sceneToLoad: IntroVideo
 --- !u!1 &1772923957
 GameObject:
   m_ObjectHideFlags: 0

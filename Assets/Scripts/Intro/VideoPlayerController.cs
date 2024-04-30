@@ -34,10 +34,12 @@ public class VideoPlayerController : MonoBehaviour
 
         // Add listener to the start button
         startButton.onClick.AddListener(StartVideo);
+
+        
     }
 
     // Function to play the video
-    void PlayVideo()
+    public void PlayVideo()
     {
         // Check if the video player is not null and the video is ready
         if (videoPlayer != null && videoPlayer.isPrepared)
@@ -52,7 +54,7 @@ public class VideoPlayerController : MonoBehaviour
     }
 
     // Function to pause the video
-    void PauseVideo()
+    public void PauseVideo()
     {
         // Check if the video player is not null and is playing
         if (videoPlayer != null && videoPlayer.isPlaying)
@@ -67,7 +69,7 @@ public class VideoPlayerController : MonoBehaviour
     }
 
     // Function to restart the video
-    void RestartVideo()
+    public void RestartVideo()
     {
         // Check if the video player is not null
         if (videoPlayer != null)
@@ -85,7 +87,7 @@ public class VideoPlayerController : MonoBehaviour
     }
 
     // Function to start the video
-    void StartVideo()
+    public void StartVideo()
     {
         // Change the scene to "YourSceneName" (replace with your actual scene name)
         SceneManager.LoadScene("Paiges");

@@ -34,8 +34,8 @@ public class PageController : MonoBehaviour
 
 
 
-    public static int currentIndex = 0; //Currently Referenced in this script, DecisionManager, ShipGameManager, PlayerController2, ShipScript
-                                        //If we do end up adding Ishmael7, UPDATE THE SCRIPTS ABOVE!!!!
+    public static int currentIndex = 0; //Currently Referenced in this script, DecisionManager, ShipGameManager, PlayerController2, ShipScript, EndVideo
+                                        //If we do ANYTHING to the panels, UPDATE THE SCRIPTS ABOVE!!!!
 
 
 
@@ -96,11 +96,11 @@ public class PageController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.DownArrow) && transform.childCount == 1)
         {
-            /*if(currentIndex == 3) //Once they're about to take off
+            if(currentIndex == 3) //Once they're about to take off
             {
-                LoadNewScene("IntroVideo"); //Play the video
+                LoadNewScene("LaunchVideo"); //Play the video
             }
-            else */if(currentIndex == 4) //Once they've crashed...
+            else if(currentIndex == 4) //Once they've crashed...
             {
                 LoadNewScene("ShipMini");  //Ship repair game
             }
@@ -115,9 +115,21 @@ public class PageController : MonoBehaviour
                     LoadNewScene("Decison"); //Otherwise go back to decision
                 }
             }
+            else if(currentIndex == 8) //Ishmael Minigame Time
+            {
+                LoadNewScene("PuzzleSlider1");
+            }
+            else if(currentIndex == 14) //Sydney Minigame Time
+            {
+                LoadNewScene("PuzzleSlider2");
+            }
             else if(currentIndex == 19) //Once they take off...
             {
                 LoadNewScene("ShipRunTutorial"); //Go to Ship Run Segment
+            }
+            else if(currentIndex == pageIndex.Count - 1) //When we've seen the last panel
+            {
+                LoadNewScene("Credits"); //Roll Credits
             }
             else
             {

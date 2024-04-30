@@ -338,7 +338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f9f27bbbc4190e24cb242f7fc6043030, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0ed894682d67a946864b7ad5ad0c55f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -361,6 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomedIn: 0
+  scaleFactor: 6
 --- !u!114 &5861098585066277049
 MonoBehaviour:
   m_ObjectHideFlags: 0
