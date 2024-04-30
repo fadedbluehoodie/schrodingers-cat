@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform gameTransform;
     [SerializeField] private Transform[] piecePrefabs;
     [SerializeField] private Button confirmButton; // Reference to the UI button
+    [SerializeField] private Button skipButton; // Reference to the Skip button
 
     private List<Transform> pieces;
     private int emptyLocation;
@@ -65,6 +66,9 @@ public class GameManager : MonoBehaviour
 
         // Add listener to the UI button
         confirmButton.onClick.AddListener(OnConfirmButtonClick);
+
+        // Add listener to the Skip button
+        skipButton.onClick.AddListener(OnSkipButtonClick);
 
         // Shuffle the puzzle automatically when the scene starts
         ShuffleAndCheck();
@@ -128,6 +132,19 @@ public class GameManager : MonoBehaviour
             Debug.Log("Puzzle is not completed yet!");
             // You can display a message to the player indicating that the puzzle is not complete
         }
+    }
+
+    private void OnSkipButtonClick()
+    {
+        // Call the SkipPuzzle method when the skip button is clicked
+        SkipPuzzle();
+    }
+
+    public void SkipPuzzle()
+    {
+        // Implement skip functionality here
+        // For example, you can reload the current scene or load the next level
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reload the current scene
     }
 
     private void ShuffleAndCheck()
