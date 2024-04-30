@@ -51,8 +51,9 @@ public class ShipGameManager : MonoBehaviour
 
     public void WinGame()
     {
+        PageController.currentIndex = 5;
         // Load victory scene or display a message
-        SceneManager.LoadScene("VictoryScene");
+        SceneManager.LoadScene("Paiges");
     }
 
 

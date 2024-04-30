@@ -36,7 +36,8 @@ public class PlayerController2 : MonoBehaviour
 
 
                     // Load the new scene
-                    SceneManager.LoadScene(4);
+                    PageController.currentIndex = 5;
+                    SceneManager.LoadScene("Paiges");
                 }
             }
         }
@@ -102,7 +103,6 @@ public class PlayerController2 : MonoBehaviour
     {
         hasTool2 = true;
     }
-
     public void UseTool2()
     {
         if (this.CompareTag("Rock"))
